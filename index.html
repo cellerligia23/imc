@@ -16,19 +16,32 @@
       <h1>CÁLCULO IMC</h1>
     </div>
     
+    <div id="div-select">
+      <label for="genre">Selecione o seu gênero:
+        <select name="genre" id="genre" onchange="updateSelect()">
+          <option value="Feminine" selected>Feminino</option>
+          <option value="Masculine">Masculino</option>
+        </select>
+      </label>
+    </div>
+
     <div id="div-inputs">
       <label for="input-weight" id="label-weight">Peso (kg):&nbsp;
         <input type="number" name="peso" id="input-weight" step="0.1" placeholder="Digite aqui">
+        <p class="error paragrafh-input-weight"></p>
       </label>
 
       <label for="input-height" id="label-height">Altura (m):
         <input type="number" name="altura" id="input-height" step="0.01" placeholder="Digite aqui">
+        <p class="error paragrafh-input-height">Colocar vírgula na altura. Ex: 1,70</p>
       </label>
     </div>
 
     <button id="btn">Calcular IMC</button>
 
-    <p id="result">O IMC desses dados é: <strong>0</strong></p>
+    <p id="paragrafh-result">O IMC desses dados é:<strong id="result">0</strong></p>
+    <p id="paragrafh-status"></p>
+    <p id="paragrafh-Weight"></p>
     </div>
 </body>
 
